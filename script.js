@@ -1,4 +1,4 @@
-[22:53, 1/12/2023] Abhi Pandey: function threeSum(arr, x) {
+ function threeSum(arr, x) {
     let closestSum = Number.MAX_VALUE;
     for(let i = 0; i < arr.length ; i++)
     {
