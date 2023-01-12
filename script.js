@@ -1,22 +1,21 @@
-function threeSum(arr, target) {
-  //your code here
-	
-	let start = i+1,end = nums.length -1;
- while(start < end){
-       const sum = nums[i]+nums[start]+nums[end];
-     if(sum === 0){
-         ans.push([nums[i],nums[start],nums[end]]);
-         start++;
-         end--;
-         while(start<end && nums[start]===nums[start-1]) start++;
-         while(start<end && nums[end]=== nums[end+1])end-=1;
-     }
-     else if(sum < 0) start++;
-     else if(sum>0) end--;
-     }
+[22:53, 1/12/2023] Abhi Pandey: function threeSum(arr, x) {
+    let closestSum = Number.MAX_VALUE;
+    for(let i = 0; i < arr.length ; i++)
+    {
+        for(let j =i + 1; j < arr.length; j++)
+        {
+            for(let k =j + 1; k < arr.length; k++)
+            {
+                
+                if (Math.abs(x - closestSum) >
+                    Math.abs(x - (arr[i] + arr[j] + arr[k])))
+                    closestSum = (arr[i] + arr[j] + arr[k]);
+            }
+        }
+    }
+     
+    // Return the closest sum found
+ return closestSum;
 }
-return ans;
-};
 
-threeSum(arr,target);
 module.exports = threeSum;
